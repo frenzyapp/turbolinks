@@ -35,6 +35,8 @@ Add the following in your `composer.json`:
 }
 ```
 
+Add `'Frenzy\Turbolinks\TurbolinksServiceProvider', ` to the `providers` array in `app/config/app.php`
+
 Publish assets to your laravel app : `php artisan asset:publish frenzy/turbolinks`
 
 Add Javascript files into your project
