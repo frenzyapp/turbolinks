@@ -10,7 +10,7 @@ Current versions of the following gems are used:
  * turbolinks: v2.2.0
  * jquery.turbolinks: v2.0.1
 
- ## Performance
+## Performance
 
 Turbolinks makes following links in your web application faster. Instead of letting
 the browser recompile the JavaScript and CSS between each page change, it keeps
