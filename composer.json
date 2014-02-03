@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Frenzy\\Turbolinks\\": "src/"
+            "Frenzy\\Turbolinks\\": "src/Frenzy/Turbolinks"
         }
     },
     "minimum-stability": "stable"
