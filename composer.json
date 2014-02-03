@@ -16,8 +16,8 @@
         "illuminate/events": "4.1.*"
     },
     "autoload": {
-        "psr-4": {
-            "Frenzy\\Turbolinks\\": "src/Frenzy/Turbolinks"
+        "psr-0": {
+            "Frenzy\\Turbolinks\\": "src/"
         }
     },
     "minimum-stability": "stable"
