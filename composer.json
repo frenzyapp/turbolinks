@@ -12,12 +12,11 @@
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "4.1.*",
-        "illuminate/http": "4.1.*",
-        "illuminate/events": "4.1.*"
+        "helthe/turbolinks": "~1.2"
     },
     "autoload": {
         "psr-4": {
-            "Frenzy\\Turbolinks\\": "src/"
+            "Frenzy\\Turbolinks\\": "src/Frenzy/Turbolinks"
         }
     },
     "minimum-stability": "stable"
