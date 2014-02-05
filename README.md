@@ -37,7 +37,20 @@ Add the following in your `composer.json`:
 
 Add `'Frenzy\Turbolinks\TurbolinksServiceProvider', ` to the `providers` array in `app/config/app.php`
 
-Publish assets to your laravel app : `php artisan asset:publish frenzy/turbolinks`
+Add Composer scripts for automatic publication of assets
+
+```json
+{
+   "scripts": {
+       "post-install-cmd": [
+           "php artisan asset:publish --path=\"vendor/helthe/turbolinks/Helthe/Component/Turbolinks/Resources/public/js\" frenzy/turbolinks"
+       ],
+       "post-update-cmd": [
+           "php artisan asset:publish --path=\"vendor/helthe/turbolinks/Helthe/Component/Turbolinks/Resources/public/js\" frenzy/turbolinks"
+       ]
+   }
+}
+```
 
 Add Javascript files into your project
 

@@ -1,9 +1,10 @@
 <?php namespace Frenzy\Turbolinks;
 
+use Helthe\Component\Turbolinks\Turbolinks;
 use Illuminate\Support\ServiceProvider;
 
-class TurbolinksServiceProvider extends ServiceProvider {
-
+class TurbolinksServiceProvider extends ServiceProvider
+{
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -19,10 +20,6 @@ class TurbolinksServiceProvider extends ServiceProvider {
     public function boot()
     {
         $this->package('frenzy/turbolinks');
-
-        /** @var Turbolinks $turbolinks */
-        $turbolinks = $this->app['turbolinks'];
-        $turbolinks->boot();
     }
 
     /**
@@ -32,17 +29,11 @@ class TurbolinksServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $app = $this->app;
         $this->app['turbolinks'] = $this->app->share(function ($app){
-            $turbolinks = new Turbolinks($app);
-
-            return $turbolinks;
+            return new Turbolinks();
         });
 
-        if(version_compare($app::VERSION, '4.1', '>=')){
-            $app->middleware('Frenzy\Turbolinks\Middleware', array($app));
-        }
-
+        $this->app->middleware('Helthe\Component\Turbolinks\StackTurbolinks', array($this->app, $this->app['turbolinks']));
     }
 
     /**
