@@ -43,10 +43,10 @@ Add Composer scripts for automatic publication of assets
 {
    "scripts": {
        "post-install-cmd": [
-           "php artisan asset:publish --path=\"vendor/helthe/turbolinks/Helthe/Component/Turbolinks/Resources/public/js\" frenzy/turbolinks"
+           "php artisan asset:publish --path=\"vendor/helthe/turbolinks/Resources/public/js\" frenzy/turbolinks"
        ],
        "post-update-cmd": [
-           "php artisan asset:publish --path=\"vendor/helthe/turbolinks/Helthe/Component/Turbolinks/Resources/public/js\" frenzy/turbolinks"
+           "php artisan asset:publish --path=\"vendor/helthe/turbolinks/Resources/public/js\" frenzy/turbolinks"
        ]
    }
 }
