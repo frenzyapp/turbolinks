@@ -33,7 +33,7 @@ class TurbolinksServiceProvider extends ServiceProvider
             return new Turbolinks();
         });
 
-        $this->app->middleware('Helthe\Component\Turbolinks\StackTurbolinks', array($this->app, $this->app['turbolinks']));
+        $this->app->middleware('Helthe\Component\Turbolinks\StackTurbolinks', array($this->app['turbolinks']));
     }
 
     /**
