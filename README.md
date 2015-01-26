@@ -1,7 +1,7 @@
-Frenzy Turbolinks for Laravel 4.1.*
+Frenzy Turbolinks for Laravel 4.1.* and 4.2.*
 ==========
 
-Frenzy Turbolinks is a port of the rails [turbolinks](https://github.com/rails/turbolinks) gem and the [jquery.turbolinks](https://github.com/kossnocorp/jquery.turbolinks) gem for projects using the Laravel 4.1.*.
+Frenzy Turbolinks is a port of the rails [turbolinks](https://github.com/rails/turbolinks) gem and the [jquery.turbolinks](https://github.com/kossnocorp/jquery.turbolinks) gem for projects using the Laravel 4.1.* and 4.2.*.
 
 ## Versions
 
