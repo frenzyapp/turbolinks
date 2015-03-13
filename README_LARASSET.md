@@ -1,5 +1,5 @@
-Frenzy Turbolinks for Laravel 5.0.*
-===================================
+Frenzy Turbolinks for Laravel 5.0
+=================================
 
 Frenzy Turbolinks is a port of the Rails [turbolinks](https://github.com/rails/turbolinks)
 and the [jquery.turbolinks](https://github.com/kossnocorp/jquery.turbolinks) gems
@@ -45,37 +45,48 @@ Run this command in a terminal:
 composer update frenzy/turbolinks
 ```
 
-Add `'Frenzy\Turbolinks\TurbolinksServiceProvider', ` to the `providers` array in `config/app.php`.
+Add `'Frenzy\Turbolinks\TurbolinksServiceProvider', ` to the `providers` array in `config/app.php`
+**after** [Larasset](https://github.com/efficiently/larasset/tree/1.0) one (if you have installed this package).
 
-Run this script for automatic publication of assets after each update.
+### With the [Larasset](https://github.com/efficiently/larasset/tree/1.0) package
 
-```bash
-php artisan vendor:publish --provider="Frenzy\Turbolinks\TurbolinksServiceProvider" --force
+If you have installed the [Larasset](https://github.com/efficiently/larasset/tree/1.0) package:
+
+The `turbolinks.js` and `jquery.turbolinks.js` files will be added to the asset pipeline and available for you to use.
+
+Add these lines in your `resource/assets/js/app.js` file, in this order:
+
+```js
+//= require jquery
+//= require jquery.turbolinks
+//= require jquery_ujs
+//
+// ... your other scripts here ...
+//
+//= require turbolinks
 ```
 
-Add Javascript files into your project
+Then if the `<head>`section of your main layout.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- ... -->
+        {!! stylesheet_link_tag('app', ['data-turbolinks-track' => true]) !!}
+        {!! javascript_include_tag('app', ['data-turbolinks-track' => true]) !!}
+    </head>
+    <!-- ... -->
+</html>
+```
+
+And it just works!
 
 **Checkout "[Faster page loads with Turbolinks](https://coderwall.com/p/ypzfdw)" for deeper explanation how to use Turbolink in real world**.
 
-## Usage
+### Without the Larasset package
 
-Using turbolinks requires both the usage of the javascript library and the event listeners included with the component.
-
-### Javascripts
-
-Both the original coffeescript version and compiled version of each script are available for use.
-
-#### Using turbolinks.js
-
-To enable turbolinks, all you need to do is add the compiled turbolinks javascript to your layout in the `<head>`section.
-
-#### Using jquery.turbolinks
-
-If you need to use jquery.turbolinks, you need to add it before `turbolinks.js`
-
-## Installation with the Larasset package
-
-Click [here](README_LARASSET.md) to publish the assets automatically.
+Click [here](README.md) to publish the assets manually.
 
 ## Compatibility
 
