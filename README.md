@@ -35,7 +35,7 @@ Add the following in your `composer.json`:
 {
     "require": {
         // ...
-        "frenzy/turbolinks": "dev-L5"
+        "frenzy/turbolinks": "dev-master"
     }
 }
 ```
@@ -47,15 +47,22 @@ composer update frenzy/turbolinks
 
 Add `'Frenzy\Turbolinks\TurbolinksServiceProvider', ` to the `providers` array in `config/app.php`.
 
-Run this script for automatic publication of assets after each update.
+Add Composer scripts for automatic publication of assets:
 
-```bash
-php artisan vendor:publish --provider="Frenzy\Turbolinks\TurbolinksServiceProvider" --force
+```json
+{
+   "scripts": {
+       "post-install-cmd": [
+           "php artisan vendor:publish --provider=\"Frenzy\\Turbolinks\\TurbolinksServiceProvider\" --force"
+       ],
+       "post-update-cmd": [
+           "php artisan vendor:publish --provider=\"Frenzy\\Turbolinks\\TurbolinksServiceProvider\" --force"
+       ]
+   }
+}
 ```
 
 Add Javascript files into your project
-
-**Checkout "[Faster page loads with Turbolinks](https://coderwall.com/p/ypzfdw)" for deeper explanation how to use Turbolink in real world**.
 
 ## Usage
 
@@ -72,6 +79,8 @@ To enable turbolinks, all you need to do is add the compiled turbolinks javascri
 #### Using jquery.turbolinks
 
 If you need to use jquery.turbolinks, you need to add it before `turbolinks.js`
+
+**Checkout "[Faster page loads with Turbolinks](https://coderwall.com/p/ypzfdw)" for deeper explanation how to use Turbolink in real world**.
 
 ## Installation with the Larasset package
 
