@@ -48,7 +48,7 @@ composer update frenzy/turbolinks
 Add `'Frenzy\Turbolinks\TurbolinksServiceProvider', ` to the `providers` array in `config/app.php`
 **after** [Larasset](https://github.com/efficiently/larasset/tree/1.0) one.
 
-### With the [Larasset](https://github.com/efficiently/larasset/tree/1.0) package
+## Usage with the [Larasset](https://github.com/efficiently/larasset/tree/1.0) package
 
 If you have installed the [Larasset](https://github.com/efficiently/larasset/tree/1.0) package:
 
@@ -84,7 +84,7 @@ And it just works!
 
 **Checkout "[Faster page loads with Turbolinks](https://coderwall.com/p/ypzfdw)" for deeper explanation how to use Turbolink in real world**.
 
-### Without the Larasset package
+## Usage without the Larasset package
 
 Click [here](README.md) to publish the assets manually.
 
