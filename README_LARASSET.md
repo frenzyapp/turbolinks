@@ -13,7 +13,7 @@ Current versions of the following JavaScript libraries are used:
  * jquery.turbolinks: v2.1.0
 
 
-For [**Laravel 4.1 or 4.2**](http://laravel.com/docs/4.2) supports see [Frenzy Turbolinks `master` branch](https://github.com/frenzyapp/turbolinks/tree/master)
+For [**Laravel 4.1 or 4.2**](http://laravel.com/docs/4.2) supports see [Frenzy Turbolinks `1.0` tag](https://github.com/frenzyapp/turbolinks/tree/1.0)
 
 ## Performance
 
@@ -35,7 +35,7 @@ Add the following in your `composer.json`:
 {
     "require": {
         // ...
-        "frenzy/turbolinks": "dev-L5"
+        "frenzy/turbolinks": "dev-master"
     }
 }
 ```
@@ -46,7 +46,7 @@ composer update frenzy/turbolinks
 ```
 
 Add `'Frenzy\Turbolinks\TurbolinksServiceProvider', ` to the `providers` array in `config/app.php`
-**after** [Larasset](https://github.com/efficiently/larasset/tree/1.0) one (if you have installed this package).
+**after** [Larasset](https://github.com/efficiently/larasset/tree/1.0) one.
 
 ### With the [Larasset](https://github.com/efficiently/larasset/tree/1.0) package
 
