@@ -70,6 +70,10 @@ To enable turbolinks, all you need to do is add the compiled turbolinks javascri
 
 If you need to use jquery.turbolinks, you need to add it before `turbolinks.js`
 
+## Installation with the Larasset package
+
+Click [here](README_LARASSET.md) to publish the assets automatically.
+
 ## Compatibility
 
 The turbolinks javascript is designed to work with any browser that fully supports

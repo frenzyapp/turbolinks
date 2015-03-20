@@ -1,7 +1,7 @@
 {
     "name": "frenzy/turbolinks",
     "description": "Frenzy Turbolinks package for Laravel 4.1.*,4.2.*",
-    "keywords":    ["laravel", "turbolinks", "jquery.turbolinks"],
+    "keywords":    ["laravel", "turbolinks", "javascript", "jquery", "jquery.turbolinks", "larasset", "asset", "ajax", "pjax"],
     "license":     "MIT",
     "authors": [
         {
