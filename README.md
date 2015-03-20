@@ -7,8 +7,10 @@ Frenzy Turbolinks is a port of the rails [turbolinks](https://github.com/rails/t
 
 Current versions of the following gems are used:
 
- * turbolinks: v2.2.0
- * jquery.turbolinks: v2.0.1
+ * turbolinks: v2.5.3
+ * jquery.turbolinks: v2.1.0
+
+For [**Laravel 5.0**](http://laravel.com/docs/5.0) supports see [Frenzy Turbolinks `master` branch](https://github.com/frenzyapp/turbolinks)
 
 ## Performance
 
@@ -22,7 +24,7 @@ CSS. You can find the rails benchmarks [here](https://stevelabnik/turbolinks_tes
 
 ## Installation
 
-### Using Composer
+### Using [Composer](https://getcomposer.org)
 
 Add the following in your `composer.json`:
 
@@ -30,7 +32,7 @@ Add the following in your `composer.json`:
 {
     "require": {
         // ...
-        "frenzy/turbolinks": "dev-master"
+        "frenzy/turbolinks": "1.0-dev"
     }
 }
 ```
@@ -70,6 +72,8 @@ To enable turbolinks, all you need to do is add the compiled turbolinks javascri
 
 If you need to use jquery.turbolinks, you need to add it before `turbolinks.js`
 
+**Checkout "[Faster page loads with Turbolinks](https://coderwall.com/p/ypzfdw)" for deeper explanation how to use Turbolink in real world**.
+
 ## Installation with the Larasset package
 
 Click [here](README_LARASSET.md) to publish the assets automatically.
@@ -94,3 +98,7 @@ if you require additional information on the javascript libraries and their usag
 ## Bugs
 
 For bugs or feature requests, please [create an issue](https://github.com/frenzyapp/turbolinks/issues/new).
+
+## Credits
+
+This package is based on the Symfony middleware package [Helthe Turbolinks](https://github.com/helthe/Turbolinks).
