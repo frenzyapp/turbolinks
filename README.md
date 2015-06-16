@@ -47,7 +47,12 @@ composer update frenzy/turbolinks
 
 Add `'Frenzy\Turbolinks\TurbolinksServiceProvider', ` to the `providers` array in `config/app.php`.
 
-Add Composer scripts for automatic publication of assets:
+Add the Turbolinks middleware to your `app/Http/Kernel.php` file, inside the `$middleware` array:
+```php
+        'Frenzy\Turbolinks\Middleware\StackTurbolinks',
+```
+
+Add these scripts for automatic publication of assets, in your `composer.json` file:
 
 ```json
 {
