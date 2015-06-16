@@ -47,7 +47,7 @@ composer update frenzy/turbolinks
 
 Add `'Frenzy\Turbolinks\TurbolinksServiceProvider', ` to the `providers` array in `config/app.php`.
 
-Add the Turbolinks middleware to your `app/Http/Kernel.php` file, inside the `$middleware` array:
+Add the Turbolinks middleware, to the `$middleware` array in `app/Http/Kernel.php`:
 ```php
         'Frenzy\Turbolinks\Middleware\StackTurbolinks',
 ```
