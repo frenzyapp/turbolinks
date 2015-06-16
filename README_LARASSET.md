@@ -48,6 +48,11 @@ composer update frenzy/turbolinks
 Add `'Frenzy\Turbolinks\TurbolinksServiceProvider', ` to the `providers` array in `config/app.php`
 **after** [Larasset](https://github.com/efficiently/larasset/tree/1.0) one.
 
+Add the Turbolinks middleware, to the `$middleware` array in `app/Http/Kernel.php`:
+```php
+        'Frenzy\Turbolinks\Middleware\StackTurbolinks',
+```
+
 ## Usage with the [Larasset](https://github.com/efficiently/larasset/tree/1.0) package
 
 If you have installed the [Larasset](https://github.com/efficiently/larasset/tree/1.0) package:
