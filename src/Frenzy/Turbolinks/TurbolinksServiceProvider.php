@@ -1,9 +1,10 @@
 <?php namespace Frenzy\Turbolinks;
 
+use File;
 use Barryvdh\StackMiddleware\StackMiddleware;
 use Helthe\Component\Turbolinks\Turbolinks;
+use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Support\ServiceProvider;
-use File;
 
 class TurbolinksServiceProvider extends ServiceProvider
 {
@@ -19,12 +20,15 @@ class TurbolinksServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot(StackMiddleware $stack)
+    public function boot(StackMiddleware $stack, ResponseFactory $factory)
     {
         // Add turbolinks and jquery.turbolinks assets path to the search paths of Larasset package
         $packageAssetsPath = base_path()."/vendor/helthe/turbolinks/Resources/public/js";
         if (File::exists($packageAssetsPath)) {
-            $this->app['config']->set('larasset.paths', array_merge([$packageAssetsPath], config('larasset.paths', [])));
+            $this->app['config']->set(
+                'larasset.paths',
+                array_merge([$packageAssetsPath], config('larasset.paths', []))
+            );
         }
 
         // Publish assets
@@ -37,6 +41,8 @@ class TurbolinksServiceProvider extends ServiceProvider
             'Helthe\Component\Turbolinks\StackTurbolinks',
             [$this->app['turbolinks']]
         );
+
+        $this->registerTurbolinksMacros($factory);
     }
 
     /**
@@ -47,7 +53,7 @@ class TurbolinksServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app['turbolinks'] = $this->app->share(function ($app) {
-            return new Turbolinks();
+            return new Turbolinks;
         });
     }
 
@@ -59,5 +65,32 @@ class TurbolinksServiceProvider extends ServiceProvider
     public function provides()
     {
         return ['turbolinks'];
+    }
+
+    /**
+     * @param ResponseFactory $factory
+     */
+    protected function registerTurbolinksMacros($factory)
+    {
+        $factory->macro('makeWithTurbolinks', function ($content, $options = []) use ($factory) {
+            $status =  array_pull($options, 'status', 200);
+            $headers = array_pull($options, 'headers', []);
+
+            $turbolinksHeaders = app('turbolinks')->convertTurbolinksOptions($options);
+            $headers = array_merge($headers, $turbolinksHeaders);
+
+            return $factory->make($content, $status, $headers);
+        });
+
+        $factory->macro('redirectToWithTurbolinks', function ($path, $options = []) use ($factory) {
+            $status =  array_pull($options, 'status', 302);
+            $headers = array_pull($options, 'headers', []);
+            $secure =  array_pull($options, 'secure');
+
+            $turbolinksHeaders = app('turbolinks')->convertTurbolinksOptions($options);
+            $headers = array_merge($headers, $turbolinksHeaders);
+
+            return $factory->redirectTo($path, $status, $headers, $secure);
+        });
     }
 }
