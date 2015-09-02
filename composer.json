@@ -1,32 +1,30 @@
 {
-    "name": "frenzy/turbolinks",
-    "description": "Frenzy Turbolinks package for Laravel 4.1.*,4.2.*",
-    "keywords":    ["laravel", "turbolinks", "javascript", "jquery", "jquery.turbolinks", "larasset", "asset", "ajax", "pjax"],
-    "license":     "MIT",
-    "authors": [
-        {
-            "name": "Studio Frénétic",
-            "email": "info@studiofrenetic.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.0",
-        "illuminate/support": ">=4.1.0,<4.3.0",
-        "helthe/turbolinks": "~1.4"
-    },
-    "autoload": {
-        "psr-0": {
-            "Frenzy\\Turbolinks\\": "src/"
-        }
-    },
-    "extra": {
-      "branch-alias": {
-        "dev-1.0-dev": "1.0-dev"
-      }
-    },
-    "config": {
-        "preferred-install": "dist"
-    },
-    "prefer-stable": true,
-    "minimum-stability": "dev"
+  "name": "frenzy/turbolinks",
+  "description": "Frenzy Turbolinks package for Laravel 4.1.*,4.2.*",
+  "keywords": ["laravel", "turbolinks", "javascript", "jquery", "jquery.turbolinks", "larasset", "asset", "ajax", "pjax"],
+  "license": "MIT",
+  "authors": [{
+    "name": "Studio Frénétic",
+    "email": "info@studiofrenetic.com"
+  }],
+  "require": {
+    "php": ">=5.3.0",
+    "illuminate/support": ">=4.1.0,<4.3.0",
+    "helthe/turbolinks": "~1.4"
+  },
+  "autoload": {
+    "psr-0": {
+      "Frenzy\\Turbolinks\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-1.0-dev": "1.0-dev"
+    }
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
 }
