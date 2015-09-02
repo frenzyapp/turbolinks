@@ -73,8 +73,8 @@ Then if the `<head>`section of your main layout.
 <html lang="en">
     <head>
         <!-- ... -->
-        {!! stylesheet_link_tag('app', ['data-turbolinks-track' => true]) !!}
-        {!! javascript_include_tag('app', ['data-turbolinks-track' => true]) !!}
+        {{ stylesheet_link_tag('app', ['data-turbolinks-track' => true]) }}
+        {{ javascript_include_tag('app', ['data-turbolinks-track' => true]) }}
     </head>
     <!-- ... -->
 </html>
