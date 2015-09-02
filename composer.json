@@ -19,6 +19,11 @@
             "Frenzy\\Turbolinks\\": "src/"
         }
     },
+    "extra": {
+      "branch-alias": {
+        "dev-1.0-dev": "1.0-dev"
+      }
+    },
     "config": {
         "preferred-install": "dist"
     },
