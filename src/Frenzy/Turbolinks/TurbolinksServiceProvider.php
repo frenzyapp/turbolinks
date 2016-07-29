@@ -22,7 +22,7 @@ class TurbolinksServiceProvider extends ServiceProvider
      */
     public function boot(StackMiddleware $stack, ResponseFactory $factory)
     {
-        // Add turbolinks and jquery.turbolinks assets path to the search paths of Larasset package
+        // Add turbolink assets path to the search paths of Larasset package
         $packageAssetsPath = base_path()."/vendor/helthe/turbolinks/Resources/public/js";
         if (File::exists($packageAssetsPath)) {
             $this->app['config']->set(
