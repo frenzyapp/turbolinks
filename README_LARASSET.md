@@ -30,6 +30,13 @@ Add the following in your `composer.json`:
 
 ```json
 {
+    "repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/tortuetorche/Turbolinks"
+    }, {
+        "type": "vcs",
+        "url": "https://github.com/efficiently/turbolinks"
+    }],
     "require": {
         // ...
         "frenzy/turbolinks": "dev-turbo5"
