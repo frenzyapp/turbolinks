@@ -32,7 +32,7 @@ Add the following in your `composer.json`:
 {
     "require": {
         // ...
-        "frenzy/turbolinks": "dev-turbo5"
+        "frenzy/turbolinks": "dev-master"
     }
 }
 ```
