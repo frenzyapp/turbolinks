@@ -32,9 +32,6 @@ Add the following in your `composer.json`:
 {
     "repositories": [{
         "type": "vcs",
-        "url": "https://github.com/tortuetorche/Turbolinks"
-    }, {
-        "type": "vcs",
         "url": "https://github.com/efficiently/turbolinks"
     }],
     "require": {
