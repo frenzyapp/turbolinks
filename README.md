@@ -1,7 +1,7 @@
 Frenzy Turbolinks for Laravel 5.*
 =================================
 
-Frenzy Turbolinks is a port of the Rails [turbolinks](https://github.com/rails/turbolinks) gem
+Frenzy Turbolinks is a port of the Rails [turbolinks](https://github.com/turbolinks/turbolinks-rails) gem
 for projects using the PHP [Laravel](http://laravel.com) 5 framework.
 
 ## Versions
@@ -95,7 +95,7 @@ help with this, check out the [Turbolinks Compatibility project](http://reed.git
 
 ## Additional Resources
 
-Please refer to the [turbolinks](https://github.com/rails/turbolinks) project
+Please refer to the [turbolinks](https://github.com/turbolinks/turbolinks-rails) project
 if you require additional information on the javascript libraries and their usage.
 
 ## Bugs
