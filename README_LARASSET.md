@@ -54,7 +54,7 @@ Add the Turbolinks middleware, to the `$middleware` array in `app/Http/Kernel.ph
 
 If you have installed the [Larasset](https://github.com/efficiently/larasset/tree/1.0) package:
 
-The `turbolinks.js` and file will be added to the asset pipeline and available for you to use.
+The `turbolinks.js` file will be added to the asset pipeline and available for you to use.
 
 Add these lines in your `resource/assets/js/app.js` file, in this order:
 
