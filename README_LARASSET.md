@@ -1,17 +1,14 @@
-Frenzy Turbolinks for Laravel 5.0
+Frenzy Turbolinks for Laravel 5.*
 =================================
 
-Frenzy Turbolinks is a port of the Rails [turbolinks](https://github.com/rails/turbolinks)
-and the [jquery.turbolinks](https://github.com/kossnocorp/jquery.turbolinks) gems
-for projects using the PHP [Laravel](http://laravel.com) 5.0 framework.
+Frenzy Turbolinks is a port of the Rails [turbolinks](https://github.com/turbolinks/turbolinks-rails) gem
+for projects using the PHP [Laravel](http://laravel.com) 5 framework.
 
 ## Versions
 
 Current versions of the following JavaScript libraries are used:
 
- * turbolinks: v2.5.3
- * jquery.turbolinks: v2.1.0
-
+ * turbolinks: v5.0.0
 
 For [**Laravel 4.1 or 4.2**](http://laravel.com/docs/4.2) supports see [Frenzy Turbolinks `1.0` tag](https://github.com/frenzyapp/turbolinks/tree/1.0)
 
@@ -57,13 +54,12 @@ Add the Turbolinks middleware, to the `$middleware` array in `app/Http/Kernel.ph
 
 If you have installed the [Larasset](https://github.com/efficiently/larasset/tree/1.0) package:
 
-The `turbolinks.js` and `jquery.turbolinks.js` files will be added to the asset pipeline and available for you to use.
+The `turbolinks.js` file will be added to the asset pipeline and available for you to use.
 
 Add these lines in your `resource/assets/js/app.js` file, in this order:
 
 ```js
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //
 // ... your other scripts here ...
@@ -106,8 +102,7 @@ help with this, check out the [Turbolinks Compatibility project](http://reed.git
 
 ## Additional Resources
 
-Please refer to the [turbolinks](https://github.com/rails/turbolinks) and
-[jquery.turbolinks](https://github.com/kossnocorp/jquery.turbolinks) projects
+Please refer to the [turbolinks](https://github.com/turbolinks/turbolinks-rails) project
 if you require additional information on the javascript libraries and their usage.
 
 ## Bugs
