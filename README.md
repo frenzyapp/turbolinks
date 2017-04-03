@@ -11,6 +11,7 @@ Current versions of the following JavaScript libraries are used:
  * turbolinks: v5.0.0
 
 For [**Laravel 5.0**](http://laravel.com/docs/5.0) supports see [Frenzy Turbolinks `3.0.0` tag](https://github.com/frenzyapp/turbolinks/tree/3.0.0)
+
 For [**Laravel 4.1 or 4.2**](http://laravel.com/docs/4.2) supports see [Frenzy Turbolinks `1.0` tag](https://github.com/frenzyapp/turbolinks/tree/1.0)
 
 ## Performance
