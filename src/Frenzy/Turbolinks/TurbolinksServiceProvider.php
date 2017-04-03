@@ -39,7 +39,7 @@ class TurbolinksServiceProvider extends ServiceProvider
         $stack->bind(
             'Frenzy\Turbolinks\Middleware\StackTurbolinks',
             'Helthe\Component\Turbolinks\StackTurbolinks',
-            [$this->app['turbolinks']]
+            ['turbolinks' => $this->app['turbolinks']]
         );
 
         $this->registerTurbolinksMacros($factory);
@@ -52,7 +52,7 @@ class TurbolinksServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app['turbolinks'] = $this->app->share(function ($app) {
+        $this->app->singleton('turbolinks', function ($app) {
             return new Turbolinks;
         });
     }
