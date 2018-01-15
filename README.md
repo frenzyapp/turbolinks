@@ -28,27 +28,19 @@ CSS. You can find the Rails benchmarks [here](https://stevelabnik/turbolinks_tes
 
 ### Using [Composer](https://getcomposer.org)
 
-Add the following in your `composer.json`:
-
-```json
-{
-    "require": {
-        // ...
-        "frenzy/turbolinks": "dev-master"
-    }
-}
-```
-
 Run this command in a terminal:
 ```bash
-composer update frenzy/turbolinks
+composer require frenzy/turbolinks
 ```
 
-Add `'Frenzy\Turbolinks\TurbolinksServiceProvider', ` to the `providers` array in `config/app.php`.
-
-Add the Turbolinks middleware, to the `$middleware` array in `app/Http/Kernel.php`:
+Add the Turbolinks middleware, to the `$middlewareGroups` array in `app/Http/Kernel.php`:
 ```php
-        'Frenzy\Turbolinks\Middleware\StackTurbolinks',
+        \Frenzy\Turbolinks\Middleware\StackTurbolinks::class,
+```
+
+**NOTICE**: For Laravel 5.4 and below, you must modify your `config/app.php`, in the `providers` array add :
+```php
+    Frenzy\Turbolinks\TurbolinksServiceProvider::class
 ```
 
 Add these scripts for automatic publication of assets, in your `composer.json` file:
