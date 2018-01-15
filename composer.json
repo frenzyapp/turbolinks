@@ -25,6 +25,13 @@
             "Frenzy\\Turbolinks\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Frenzy\\Turbolinks\\TurbolinksServiceProvider"
+            ]
+        }
+    },
     "config": {
         "preferred-install": "dist"
     },
