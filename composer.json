@@ -17,8 +17,8 @@
         }
     ],
     "require": {
-        "barryvdh/laravel-stack-middleware": "~1.2.0",
-        "helthe/turbolinks": "~2.1.0"
+        "barryvdh/laravel-stack-middleware": "~1.2.1",
+        "helthe/turbolinks": "~2.2.0"
     },
     "autoload": {
         "psr-0": {
