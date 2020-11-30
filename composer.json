@@ -16,9 +16,15 @@
             "email": "tortuetorche@spam.me"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/tortuetorche/Turbolinks"
+        }
+    ],
     "require": {
-        "barryvdh/laravel-stack-middleware": "~1.2.1",
-        "helthe/turbolinks": "~2.2.0"
+        "barryvdh/laravel-stack-middleware": "~1.2.5",
+        "helthe/turbolinks": "dev-php8.0"
     },
     "autoload": {
         "psr-0": {
