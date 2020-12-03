@@ -1,8 +1,8 @@
 {
     "name": "frenzy/turbolinks",
-    "description": "Frenzy Turbolinks makes following links in your web application faster with Laravel 5",
+    "description": "Frenzy Turbolinks makes following links in your web application faster with Laravel",
     "keywords": [
-        "laravel", "laravel 5", "turbolinks", "turbolinks 5",
+        "laravel", "turbolinks",
         "javascript", "larasset", "assets", "ajax", "pjax"
     ],
     "license":     "MIT",
